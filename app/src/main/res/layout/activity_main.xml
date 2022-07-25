@@ -6,15 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="LOGO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/skyway" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="280dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="LOGO"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/skyway" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@drawable/rounded_corner"
+            app:backgroundTint="#0277B6"
+            android:layout_weight="0"
+            android:stateListAnimator="@null"
+            android:text="시작하기"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
