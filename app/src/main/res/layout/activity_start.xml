@@ -4,34 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".StartActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_margin="20dp"
         android:gravity="center"
-        android:layout_margin="20dp">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="280dp"
             android:layout_height="120dp"
             android:layout_centerHorizontal="true"
-            android:contentDescription="LOGO"
             android:layout_weight="1"
+            android:contentDescription="LOGO"
             app:srcCompat="@drawable/skyway" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/start_btn"
             android:layout_width="match_parent"
             android:layout_height="63dp"
-            android:background="@drawable/rounded_corner"
-            app:backgroundTint="#0277B6"
             android:layout_weight="0"
+            android:background="@drawable/button_style"
             android:stateListAnimator="@null"
             android:text="시작하기"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:textSize="20dp" />
+            app:backgroundTint="#0277B6" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

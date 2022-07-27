@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectActivy"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="@drawable/skyway"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/daelinear"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/select_style"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="대대선택"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="196dp"
+            android:layout_height="1dp"
+            android:background="@drawable/gradient"
+            android:layout_gravity="center"/>
+        <Spinner
+            android:id="@+id/daedae_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/dae"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/joonglinear"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:background="@drawable/select_style"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="중대선택"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="196dp"
+            android:layout_height="1dp"
+            android:background="@drawable/gradient"
+            android:layout_gravity="center"/>
+        <Spinner
+            android:id="@+id/joongdae_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/joong"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/banlinear"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:background="@drawable/select_style"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="반선택"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="196dp"
+            android:layout_height="1dp"
+            android:background="@drawable/gradient"
+            android:layout_gravity="center"/>
+        <Spinner
+            android:id="@+id/ban_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/ban"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/joelinear"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:background="@drawable/select_style"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="조선택"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="196dp"
+            android:layout_height="1dp"
+            android:background="@drawable/gradient"
+            android:layout_gravity="center"/>
+        <Spinner
+            android:id="@+id/joe_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:entries="@array/joe"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/nextbtn1"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginTop="47dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:text="다음으로"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="@drawable/button_style"/>
+</LinearLayout>

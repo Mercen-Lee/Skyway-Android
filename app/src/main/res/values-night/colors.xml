@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="darkmode">#000000</color>
-    <color name="dark_spinner">#FFFFFF</color>
-    <color name="dark_skyway">#00B4D8</color>
+    <color name="darkmode">#FFFFFF</color>
+    <color name="dark_spinner">#494949</color>
+    <color name="dark_skyway">#0277B6</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
