@@ -29,8 +29,57 @@ public class SelectActivy extends AppCompatActivity {
         banlinear.setVisibility(View.INVISIBLE);
         LinearLayout joelinear = findViewById(R.id.joelinear);
         joelinear.setVisibility(View.INVISIBLE);
-        String daeinfor = daedae.getSelectedItem().toString();
 
+        daedae.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String infor = daedae.getSelectedItem().toString();
+                if(infor.equals("선택안함")){
+                    joonglinear.setVisibility(View.INVISIBLE);
+                } else {
+                    joonglinear.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        joongdae.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String infor = joongdae.getSelectedItem().toString();
+                if(infor.equals("선택안함")){
+                    banlinear.setVisibility(View.INVISIBLE);
+                } else {
+                    banlinear.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        ban.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String infor = ban.getSelectedItem().toString();
+                if(infor.equals("선택안함")){
+                    joelinear.setVisibility(View.INVISIBLE);
+                    nextbtn1.setVisibility(View.INVISIBLE);
+                } else {
+                    joelinear.setVisibility(View.VISIBLE);
+                    nextbtn1.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         nextbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +93,8 @@ public class SelectActivy extends AppCompatActivity {
                 intent.putExtra("ban",banstr);
                 intent.putExtra("joe",joestr);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                finish();
             }
         });
     }

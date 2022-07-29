@@ -25,17 +25,5 @@
             android:contentDescription="LOGO"
             app:srcCompat="@drawable/skyway" />
 
-        <Button
-            android:id="@+id/start_btn"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_weight="0"
-            android:background="@drawable/button_style"
-            android:stateListAnimator="@null"
-            android:text="시작하기"
-            android:textSize="20dp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:backgroundTint="#0277B6" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,10 +12,15 @@ import android.widget.EditText;
 
 public class NameActivity extends AppCompatActivity {
 
+    boolean name_yes = false;
+    boolean num_yes = false;
+    String getname;
+    String getnum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
+
         Button nextbtn = findViewById(R.id.nextbtn2);
         nextbtn.setVisibility(View.INVISIBLE);
         Intent intent = getIntent();
@@ -25,8 +30,6 @@ public class NameActivity extends AppCompatActivity {
         String joe_name = intent.getStringExtra("joe");
         EditText soldiernum = findViewById(R.id.soldiernum);
         EditText soldiername = findViewById(R.id.soldiername);
-        String getname = soldiername.getText().toString();
-        String getnum = soldiernum.getText().toString();
         soldiernum.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -35,15 +38,51 @@ public class NameActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int before, int i2) {
-
+                 if(soldiernum.getText().toString().length() != 0){
+                     num_yes = true;
+                 } else {
+                     num_yes = false;
+                 }
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-
+                if(num_yes&&name_yes){
+                    nextbtn.setVisibility(View.VISIBLE);
+                    getname = soldiername.getText().toString();
+                    getnum = soldiernum.getText().toString();
+                } else {
+                    nextbtn.setVisibility(View.INVISIBLE);
+                }
             }
         });
 
+        soldiername.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(soldiername.getText().toString().length() != 0){
+                    name_yes = true;
+                } else {
+                    name_yes = false;
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(num_yes&&name_yes){
+                    nextbtn.setVisibility(View.VISIBLE);
+                    getname = soldiername.getText().toString();
+                    getnum = soldiernum.getText().toString();
+                } else {
+                    nextbtn.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +94,8 @@ public class NameActivity extends AppCompatActivity {
                 intent.putExtra("solname",getname);
                 intent.putExtra("solnum",getnum);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                finish();
             }
         });
     }
