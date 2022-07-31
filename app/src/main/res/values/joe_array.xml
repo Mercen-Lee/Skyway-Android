@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="joe">
+        <item>선택안함</item>
+        <item>운전교육반</item>
+        <item>세단조</item>
+        <item>지휘관</item>
+        <item>대형버스조</item>
+        <item>미니버스조</item>
+        <item>트럭조</item>
+        <item>지게차</item>
+        <item>앰뷸런스</item>
+        <item>방공포차량</item>
+    </string-array>
+</resources>

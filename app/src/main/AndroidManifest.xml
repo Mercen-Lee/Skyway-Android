@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Skyway">
         <activity
-            android:name=".SubActivity"
+            android:name=".StatementActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SelectActivy"
+            android:exported="false" />
     </application>
 
 </manifest>

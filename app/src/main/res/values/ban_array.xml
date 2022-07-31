@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ban">
+        <item>선택안함</item>
+        <item>중대사무실</item>
+        <item>경차량반</item>
+        <item>종합차량반</item>
+        <item>특수차량반</item>
+        <item>행정계</item>
+        <item>주임원사실</item>
+        <item>배차실</item>
+    </string-array>
+</resources>
